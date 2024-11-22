@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faq</title>
+    <link href="https://fonts.google.com/share?selection.family=Arvo:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet">
+    <link href="https://fonts.google.com/share?selection.family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+<style>/* General Reset */
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and navbar */
+    background-color: #494c8e; /* Purple background */
+    padding: 10px 20px;
+    height: 80px; /* Consistent height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo img {
+    width: 70px; /* Consistent logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and nav links */
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between nav links */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar ul li a:hover {
+    color: #17b4db; /* Light blue hover */
+}
+
+
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.faq-section h1 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2.5rem;
+    color: #2f40be;
+    margin-bottom: 20px;
+}
+
+.faq-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* FAQ Items */
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h2 {
+    font-size: 1.5rem;
+    color: #2f40be;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.faq-item h2:hover {
+    color: #17b4db;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    display: none; /* Initially hide answers */
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+/* Active FAQ Items */
+.faq-item.active p {
+    display: block; /* Show the answer when active */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #494c8e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #17b4db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 20px;
+    }
+
+    .faq-section h1 {
+        font-size: 2rem;
+    }
+
+    .faq-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-item p {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo2.jpg" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="http://localhost/iqa/rooms.php">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-section">
+        <h1>FAQs</h1>
+        <p>Got questions? We've got answers.</p>
+    
+        <div class="faq">
+            <div class="faq-item">
+                <h2>How do I make a reservation?</h2>
+                <p>You can book a room directly through our website, call our reservation desk, or visit us in person. Simply select your preferred dates and room type to confirm your booking.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>What are the check-in and check-out times?</h2>
+                <p>Check-in is available from 3:00 PM, and check-out is until 11:00 AM. If you need early check-in or late check-out, please contact us in advance to make arrangements (additional charges may apply)</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>What amenities are included with my stay?</h2>
+                <p>All rooms include free Wi-Fi, complimentary breakfast, access to the pool and gym, and 24/7 room service. Additional amenities depend on the room type you choose.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>Can I cancel or modify my reservation?</h2>
+                <p>Reservations can be canceled or modified up to 24 hours before check-in time without penalty. For group bookings or special packages, cancellation policies may differ. Contact us for details.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>Do you offer transportation services?</h2>
+                <p>Yes, we provide airport pick-up and drop-off services for an additional fee. Please request this service at least 24 hours before your arrival or departure.</p>
+            </div>
+            <div class="faq-item">
+                <h2>What payment methods do you accept?</h3>
+                <p>We accept major credit cards, debit cards, and cash payments at the front desk during check-in.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // JavaScript to make FAQ items expandable
+        document.querySelectorAll('.faq-item h2').forEach(question => {
+            question.addEventListener('click', () => {
+                // Toggle the 'active' class on the parent .faq-item
+                question.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    </body>
+    </html>

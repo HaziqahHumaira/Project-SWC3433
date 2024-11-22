@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.google.com/share?selection.family=Arvo:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet">
+    <link href="https://fonts.google.com/share?selection.family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    
+    <style>/* General Reset */
+       /* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #494c8e;
+    padding: 10px 20px;
+    height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: white;
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensures the header stays above other content */
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar ul li a:hover {
+    color: #17b4db; /* Light blue hover effect */
+}
+
+        /* About Us Section */
+        .about-us {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .about-us h1 {
+            font-family: 'Caveat Brush', cursive;
+            font-size: 3rem;
+            color: #2f40be;
+            margin-bottom: 20px;
+        }
+        
+        .about-us h2 {
+            font-family: 'Arvo', serif;
+            font-size: 2rem;
+            color: #494c8e;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .about-us p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .image-section {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .about-image {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+       
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-image {
+                width: 100%;
+            }
+        
+            .about-us h1 {
+                font-size: 2.5rem;
+            }
+        
+            .about-us h2 {
+                font-size: 1.8rem;
+            }
+        }
+        </style>
+
+
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo2.jpg" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="http://localhost/iqa/rooms.php">Room</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <section class="about-us">
+            <h1>Lets get to Know About Us!</h1>
+            <p>Experience unparalleled luxury and comfort.</p>
+    
+            <div class="image-section">
+                <img src="Viewgarden.jpg" alt="Group photo" class="about-image">
+                <img src="beachfront (1).jpg" alt="Group photo" class="about-image">
+            </div>
+    
+            <h2>Our Story</h2>
+            <p>Founded in 2020,The Royal Embun was built to create a place where guests can feel at home while enjoying the charm of City Paradise. Inspired by values like hospitality, culture, or comfort, our journey is about making every stay memorable</p>
+    
+            <h2>What We Offer</h2>
+            <p>We provide elegant rooms, exceptional dining, wellness facilities, and personalized services. From unique offerings like tours or events to modern comforts, we ensure every guest enjoys an unforgettable experience.</p>
+    
+            <h2>Our Promise</h2>
+            <p>At The Royal Embun, we promise warm hospitality, impeccable cleanliness, and a personalized touch. Your comfort and satisfaction are at the heart of everything we do.</p>
+    
+            <h2>Meet Our Team</h2>
+            <p>Our dedicated team of hospitality experts, chefs, and staff is here to make your stay seamless and special. From check-in to farewell, we’re committed to exceptional service</p>
+    
+            <h2>Come Visit Us!</h2>
+            <p>Located in the heart of City Paradise, The Royal Embun is your gateway to Kuala Lumpur. Come and experience the best of destination with us. We can’t wait to welcome you!</p>
+        </section>
+    </body>
+    </html>

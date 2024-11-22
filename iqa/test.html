@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Dessert Shop - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.google.com/share?selection.family=Arvo:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet">
+    <link href="https://fonts.google.com/share?selection.family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="login-btn">Login/Signup</a>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <h2>Our Dessert Categories</h2>
+        <div class="categories">
+            <!-- First Row of Categories -->
+            <div class="category">
+                <div class="image-slider">
+                    <img src="cc1.jpg" alt="Category 1 Image 1" class="slider-image">
+                    <img src="cc2.jpg" alt="Category 1 Image 2" class="slider-image">
+                </div>
+                <h3>Cupcake</h3>
+                <p>Description of Category 1.</p>
+                <a href="#" class="order-btn" onclick="openModal('cupcakeModal')">View Flavors</a>
+            </div>
+            <div class="category">
+                <div class="image-slider">
+                    <img src="c1.jpg" alt="Category 2 Image 1" class="slider-image">
+                    <img src="c2.jpg" alt="Category 2 Image 2" class="slider-image">
+                </div>
+                <h3>Cake</h3>
+                <p>Description of Category 2.</p>
+                <a href="#" class="order-btn" onclick="openModal('cakeModal')">View Flavors</a>
+            </div>
+            <div class="category">
+                <div class="image-slider">
+                    <img src="d1.jpg" alt="Category 4 Image 1" class="slider-image">
+                    <img src="d2.jpg" alt="Category 4 Image 2" class="slider-image">
+                </div>
+                <h3>Doughnut</h3>
+                <p>Description of Category 4.</p>
+                <a href="#" class="order-btn" onclick="openModal('donutModal')">View Flavors</a>
+            </div>
+            <div class="category">
+                <div class="image-slider">
+                    <img src="m1.jpg" alt="Category 6 Image 1" class="slider-image">
+                    <img src="m2.jpg" alt="Category 6 Image 2" class="slider-image">
+                </div>
+                <h3>Macarons</h3>
+                <p>Description of Category 6.</p>
+                <a href="#" class="order-btn" onclick="openModal('macaronsModal')">View Flavors</a>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="categories">
+            <!-- Second Row of Categories -->
+            <div class="category">
+                <div class="image-slider">
+                    <img src="cookies.jpg" alt="Category 7 Image 1" class="slider-image">
+                    <img src="cookies1.jpg" alt="Category 7 Image 2" class="slider-image">
+                </div>
+                <h3>Cookies</h3>
+                <p>Description of Category 7.</p>
+                <a href="#" class="order-btn" onclick="openModal('cookiesModal')">View Flavors</a>
+            </div>
+            <div class="category">
+                <div class="image-slider">
+                    <img src="f1.jpg" alt="Category 11 Image 1" class="slider-image">
+                    <img src="g2.jpg" alt="Category 11 Image 2" class="slider-image">
+                </div>
+                <h3>Ice Cream</h3>
+                <p>Description of Category 11.</p>
+                <a href="#" class="order-btn" onclick="openModal('icecreamModal')">View Flavors</a>
+            </div>
+            <div class="category">
+                <div class="image-slider">
+                    <img src="s1.jpg" alt="Category 12 Image 1" class="slider-image">
+                    <img src="s2.jpg" alt="Category 12 Image 2" class="slider-image">
+                </div>
+                <h3>Beverages</h3>
+                <p>Description of Category 12.</p>
+                <a href="#" class="order-btn" onclick="openModal('beverageModal')">View Flavors</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Modal for Cupcake Flavors -->
+<div id="cupcakeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cupcakeModal')">&times;</span>
+        <h2>Cupcake Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="Mystic-Moon-Galaxy-Cupcakes.jpg" alt="Mystic Moon">
+                <h3>Mystic Moon Galaxy Cupcake</h3>
+                <p class="flavor-description">Purple, yellow and green coloured, bubble gum, grape, and banana flavoured vanilla cupcakes with same coloured and flavoured frosting on top with a bright pink chocolate sphere</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="MysticQuantity" value="1" checked> 1 Piece (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="MysticQuantity" value="6"> 6 Pieces (Rm45.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="MysticQuantity" value="12"> 12 Pieces (Rm90.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cupcakes', 'Mystic Moon', 'MysticQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Gold-Digger-Cupcakes.jpg" alt="Gold Digger">
+                <h3>Gold Digger Cupcake</h3>
+                <p class="flavor-description">Lightly flavoured cocoa vanilla cupcakes with chocolate frosting covered in gold crushed Oreos and a mini gold Oreo on top</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="goldQuantity" value="1" checked> 1 Piece (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="goldQuantity" value="6"> 6 Pieces (Rm45.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="goldQuantity" value="12"> 12 Pieces (Rm90.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cupcakes', 'Gold Digger', 'goldQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Rock-City-High-School-Dance-Cupcakes.jpg" alt="Rock-City-High-School-Dance-Cupcakes">
+                <h3>Rock City Cupcake</h3>
+                <p class="flavor-description">Strawberry flavored vanilla cupcakes topped with striped bumblebee American Buttercream Frosting and royal icing decorations.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="RockQuantity" value="1" checked> 1 Piece (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="RockQuantity" value="6"> 6 Pieces (Rm45.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="RockQuantity" value="12"> 12 Pieces (Rm90.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cupcakes', 'Rock City', 'RockQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Loukoumades-Cupcakes_1.jpg" alt="Loukou">
+                <h3>Loukoumades Cupcakes</h3>
+                <p class="flavor-description">Traditionally drizzled with honey and a sprinkle of pistachios, I decided to dress them up with hazelnut spread instead</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="LoukouQuantity" value="1" checked> 1 Piece (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="LoukouQuantity" value="6"> 6 Pieces (Rm45.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="LoukouQuantity" value="12"> 12 Pieces (Rm90.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cupcakes', 'Loukoumades', 'LoukouQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Strawberry-Mango-Margarhita-Cupcakes-01.jpg" alt="Strawberry-Mango-Margarhita-Cupcakes-01">
+                <h3>Strawberry Mango Cupcake</h3>
+                <p class="flavor-description">Don’t contain alcohol which is great for those of us who don’t drink, but they still contain those delicious fresh flavors in the drink. Strawberry and mango, coupled with lime is a flavor combo match made in heaven.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="StrawberryQuantity" value="1" checked> 1 Piece (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="StrawberryQuantity" value="6"> 6 Pieces (Rm45.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="StrawberryQuantity" value="12"> 12 Pieces (Rm90.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cupcakes', 'Strawberry', 'StrawberryQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Freakfetti-Cupcakes.jpg" alt="Freakfetti-Cupcakes">
+                <h3>Freakfetti Cupcake</h3>
+                <p class="flavor-description">Funfetti vanilla flavoured freak shake cupcakes with a cake donut on top, drizzled with chocolate ganache</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="FreakQuantity" value="1" checked> 1 Piece (Rm9.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="FreakQuantity" value="6"> 6 Pieces (Rm52.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="FreakQuantity" value="12"> 12 Pieces (Rm104.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cupcakes', 'Freakfetti', 'FreakQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Cake Flavors -->
+<div id="cakeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cakeModal')">&times;</span>
+        <h2>Cake Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="STRAWBERRY-CAKE-WEB-03.jpg" alt="Strawberry Cake">
+                <h3>Strawberry Cake</h3>
+                <p class="flavor-description">Summery, fresh, super soft and creamy. Every bite is a melt in your mouth experience</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="ScQuantity" value="1" checked> 1 Piece (Rm12.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="ScQuantity" value="6"> 6 Pieces (Rm70.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="ScQuantity" value="12"> Whole Cake (Rm130.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cakes', 'Strawberry Cake', 'ScQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="RED-VELVET-CAKE-23-WEB-07.jpg" alt="RED-VELVET-CAKE-23-WEB-07">
+                <h3>Red Velvet Cake</h3>
+                <p class="flavor-description">Lightly cocoa flavored cake that when paired with dreamy cream cheese frosting is a melt in your mouth experience in every bite.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="rvQuantity" value="1" checked> 1 Piece (Rm12.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="rvQuantity" value="6"> 6 Pieces (Rm70.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="rvQuantity" value="12"> Whole Cake (Rm130.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cakes', 'Red Velvet', 'rvQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="FERRERO-ROCHER-CAKE-WEB-03.jpg" alt="FERRERO-ROCHER-CAKE-WEB-03">
+                <h3>Ferrero Rocher Cake</h3>
+                <p class="flavor-description">Silky chocolate ganache, covered in crunchy toasted hazelnuts and draped in my glossy one-bowl chocolate sauce.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="FerQuantity" value="1" checked> 1 Piece (Rm15.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="FerQuantity" value="6"> 6 Pieces (Rm90.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="FerQuantity" value="12"> Whole Cake (Rm160.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cakes', 'Ferrero', 'FerQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="COOKIES-AND-CREAM-CAKE-22-WEB-10.jpg" alt="COOKIES-AND-CREAM-CAKE-22-WEB-10">
+                <h3>Cookies & Cream Cake</h3>
+                <p class="flavor-description">cake is packed full of Oreos in the chocolate sponge, in the frosting and is even topped with it</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="OreoQuantity" value="1" checked> 1 Piece (Rm15.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="OreoQuantity" value="6"> 6 Pieces (Rm90.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="OreoQuantity" value="12"> Whole Cake (Rm160.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cakes', 'Oreo Cake', 'OreoQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="CARROT-CAKE-WEB-01.jpg" alt="CARROT-CAKE-WEB-01">
+                <h3>Carrot Cake</h3>
+                <p class="flavor-description">Creamy walnuts, moist carrot cake that isn’t too oily, and a cream cheese frosting that is creamy and not too sweet.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="CarrotQuantity" value="1" checked> 1 Slice (Rm13.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CarrotQuantity" value="6"> 6 Slices (Rm75.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CarrotQuantity" value="12"> Whole Cake (Rm150.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cakes', 'Carrot Cake', 'CarrotQuantity')">Add to Cart</button>
+            </div>
+        </div>
+        <div id="cart-summary"></div>
+    </div>
+</div>
+
+<!-- Modal for Doughnut Flavors -->
+<div id="donutModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('donutModal')">&times;</span>
+        <h2>Doughnut Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="biscella.webp" alt="Biscella">
+                <h3>Biscella Doughnut</h3>
+                <p class="flavor-description">Rolled in cinnamon sugar, filled with Nutella and Lotus Biscoff Spread and topped with a Lotus Biscoff Biscuit!</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="BisQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BisQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BisQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('doughnuts', 'Biscella', 'BisQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Bruno_Mars_9_1024x1024.webp" alt="Bruno_Mars_9_1024x1024">
+                <h3>Bruno Mars Doughnut</h3>
+                <p class="flavor-description">Filled with chocolate hazelnut buttercream, dipped in chocolate glaze, drizzled with dark chocolate glaze, topped with wafer and Kinder Bueno pieces!</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="brunoQuantity" value="1" checked> 1 Piece (Rm5.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="brunoQuantity" value="6"> 6 Pieces (Rm30.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="brunoQuantity" value="12"> 12 Pieces (Rm55.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('doughnuts', 'Bruno Mars', 'BrunoQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Robert_De_N_Oreo_9_1024x1024.webp" alt="Robert_De_N_Oreo_9_1024x1024">
+                <h3>Robert De N'Oreo Doughnut</h3>
+                <p class="flavor-description">Filled with chocolate hazelnut buttercream, dipped in chocolate glaze, drizzled with dark chocolate glaze, topped with wafer and Kinder Bueno pieces!</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="RobertQuantity" value="1" checked> 1 Piece (Rm5.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="RobertQuantity" value="6"> 6 Pieces (Rm30.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="RobertQuantity" value="12"> 12 Pieces (Rm55.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('doughnuts', 'Robert', 'RoberrtQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Cake_Blanchett_9_1024x1024.webp" alt="Cake_Blanchett_9_1024x1024">
+                <h3>Cate Blanchett Doughnut</h3>
+                <p class="flavor-description">Dipped in caramel glaze, drizzled with TimTam glaze, topped with white chocolate curls and TimTam Original Biscuits!</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="CateQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CateQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CateQuantity" value="12"> 12 Pieces (Rm48.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('doughnuts', 'Cate', 'CateQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Slim_Shady_9_1024x1024.webp" alt="Slim_Shady_9_1024x1024">
+                <h3>Slim Shady Doughnut</h3>
+                <p class="flavor-description">Dipped in vanilla cream glaze and topped with Mini M&Ms!</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="SlimQuantity" value="1" checked> 1 Piece (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="SlimQuantity" value="6"> 6 Pieces (Rm45.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="SlimQuantity" value="12"> 12 Pieces (Rm90.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('doughnuts', 'Slim', 'SlimQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Macarons Flavors -->
+<div id="macaronsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('macaronsModal')">&times;</span>
+        <h2>Macarons Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="Biscoff Butter.webp" alt="Biscoff">
+                <h3>Biscoff Butter Macaron</h3>
+                <p class="flavor-description">A creamy Biscoff cookie butter American buttercream filling paired with a crumble of Biscoff cookies for a pinch of texture and decoration</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="BiscQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BiscQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BiscQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('macarons', 'Biscoff', 'BiscQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="white swiss.webp" alt="white swiss">
+                <h3>White Cranberry Macaron</h3>
+                <p class="flavor-description">Creamy white chocolate ganache paired with a bright cranberry filling. This flavor combo is honestly super high on my list of favorites!</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="CranQuantity" value="1" checked> 1 Piece (Rm5.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CranQuantity" value="6"> 6 Pieces (Rm30.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CranQuantity" value="12"> 12 Pieces (Rm55.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('macarons', 'Cranberry', 'CranQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="pistachio.webp" alt="pistachio">
+                <h3>Pistachio Raspberry Macaron</h3>
+                <p class="flavor-description">Bumped Crème Brûlée out of the top spot with pistachio and raspberry</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="PisQuantity" value="1" checked> 1 Piece (Rm5.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="PisQuantity" value="6"> 6 Pieces (Rm30.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="PisQuantity" value="12"> 12 Pieces (Rm55.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('macarons', 'Pistachio', 'PisQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="blackberries.webp" alt="blackberries">
+                <h3>Blackberries Mint Macaron</h3>
+                <p class="flavor-description">Features peak season blackberry filling, along with a crisp mint and blackberry buttercream</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="BlackQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BlackQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BlackQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('macarons', 'Blackberries', 'BlackQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="coconut.webp" alt="coconut">
+                <h3>Toasted Coconut Macaron</h3>
+                <p class="flavor-description">French macaron shells are filled with a creamy buttercream jam packed with coconut flavor</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="CoconutQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CoconutQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CoconutQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('macarons', 'Coconut', 'CoconutQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Cookies Flavors -->
+<div id="cookiesModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cookiesModal')">&times;</span>
+        <h2>Cookies Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="Compost_01.jpg" alt="Compost_01">
+                <h3>Compost Cookie</h3>
+                <p class="flavor-description">The original sweet and salty kitchen sink cookie, with chocolate chips in a deep vanilla base</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="CompQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CompQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CompQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cookies', 'Compost', 'CompQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="ChocolateConfetti_01_1.jpg" alt="ChocolateConfetti_01_1">
+                <h3>Chocolate Confetti Cookie</h3>
+                <p class="flavor-description">A cocoa-and-vanilla-packed revision of the classic Confetti Cookie, remixing chocolatey boxed cake mix flavors into a fun and fluffy cookie</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="ConQuantity" value="1" checked> 1 Piece (Rm5.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="ConQuantity" value="6"> 6 Pieces (Rm30.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="ConQuantity" value="12"> 12 Pieces (Rm55.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cookies', 'Confetti', 'ConQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="CornflakeChocolateChipMarshmallow_011_1ad88602-07c3-4352-a874-397c60707091.jpg" alt="CornflakeChocolateChipMarshmallow_011_1ad88602-07c3-4352-a874-397c60707091">
+                <h3>Cornflakes Chocolate Cookie</h3>
+                <p class="flavor-description">Crunchy, chewy riff on the classic chocolate chip cookie, packed full of caramelized cornflakes and gooey marshmallows in a deep vanilla base</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="CornQuantity" value="1" checked> 1 Piece (Rm5.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CornQuantity" value="6"> 6 Pieces (Rm30.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="CornQuantity" value="12"> 12 Pieces (Rm55.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cookies', 'Cornflakes', 'CornQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Blueberry_Cream_01_1.jpg" alt="Blueberry_Cream_01_1">
+                <h3>Blueberry Cream Macaron</h3>
+                <p class="flavor-description">A muffin top disguised as a cookie: mini white chocolate chips and bright, chewy dried blueberry bits suspended in a luscious sugar cookie base.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="BlueQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BlueQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="BlueQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cookies', 'Blueberries', 'BlueQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="triple.jpg" alt="triple">
+                <h3>Peanut Butter Cookies</h3>
+                <p class="flavor-description">soft and nutty energy of a peanut butter cookie up a notch with peanut butter chocolate chunks and peanut butter chips</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="PbQuantity" value="1" checked> 1 Piece (Rm4.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="PbQuantity" value="6"> 6 Pieces (Rm24.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="PbQuantity" value="12"> 12 Pieces (Rm45.00)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('cookies', 'Peanut Butter', 'PbQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for IceCreamFlavors -->
+<div id="icecreamModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('icereamModal')">&times;</span>
+        <h2>Ice Cream Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="pinkpeppermint.webp" alt="pinkpeppermint">
+                <h3>White Chocolate Peppermint</h3>
+                <p class="flavor-description">A swirl of pink and white peppermint with white chocolate freckles</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="pinkQuantity" value="1" checked> 1 Scoop (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="pinkQuantity" value="6"> 2 Scoop (Rm15)
+                    </label>
+                    <label>
+                        <input type="radio" name="pinkQuantity" value="12"> Bowl (Rm20.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('icecreams', 'Pink Peppermint', 'pinkQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="PDP-LemonCrinkle-Cone-Color2-1500px_750x.webp" alt="PDP-LemonCrinkle-Cone-Color2-1500px_750x">
+                <h3>Lemon Crinkle</h3>
+                <p class="flavor-description">Vibrant and buttery lemon ice cream with a ribbon of sweet cream</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="lemonQuantity" value="1" checked> 1 Scoop (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="lemonQuantity" value="6"> 2 Scoop (Rm15)
+                    </label>
+                    <label>
+                        <input type="radio" name="lemonQuantity" value="12"> Bowl (Rm20.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('icecreams', 'Lemon', 'lemonQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="PDP-CookiesinCream-MacroCone-1500px_750x.webp" alt="PDP-CookiesinCream-MacroCone-1500px_750x">
+                <h3>Cookies N cream</h3>
+                <p class="flavor-description">Scratch-made darkest-chocolate cookies with flecks of white chocolate in vanilla-scented cream</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="cookiesQuantity" value="1" checked> 1 Scoop (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="cookiesQuantity" value="6"> 2 Scoop (Rm15)
+                    </label>
+                    <label>
+                        <input type="radio" name="cookiesQuantity" value="12"> Bowl (Rm20.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('icecreams', 'Cookies Cream', 'cookiesQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Jenis_WildBerryLavender-MacroCone-1500px_750x.webp" alt="Jenis_WildBerryLavender-MacroCone-1500px_750x">
+                <h3>Wildberry Lavender</h3>
+                <p class="flavor-description">Intensely fruity, brambly berry ice cream with a pop of sweet orange and lavender</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="berryQuantity" value="1" checked> 1 Scoop (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="berryQuantity" value="6"> 2 Scoop (Rm15)
+                    </label>
+                    <label>
+                        <input type="radio" name="berryQuantity" value="12"> Bowl (Rm20.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('icecreams', 'Wildberry', 'berryQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Jenis_TexasSheetCake-MacroCone-1500px_750x.webp" alt="Jenis_TexasSheetCake-MacroCone-1500px_750x">
+                <h3>Texas Chocolate</h3>
+                <p class="flavor-description">Decadent chocolate cake crumbles, bittersweet fudge, and palate-gripping cocoa</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="texasQuantity" value="1" checked> 1 Scoop (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="texasQuantity" value="6"> 2 Scoop (Rm15)
+                    </label>
+                    <label>
+                        <input type="radio" name="texasQuantity" value="12"> Bowl (Rm20.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('icecreams', 'Texas', 'texasQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="Jenis_HoneyVanillaBean-MacroCone-1500px_750x.webp" alt="Jenis_HoneyVanillaBean-MacroCone-1500px_750x">
+                <h3>Honey Vanilla</h3>
+                <p class="flavor-description">Vanilla beans that are warm and complex in flavor and a perfect partner for a touch of honey and grass-grazed milk</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="vanillaQuantity" value="1" checked> 1 Scoop (Rm8.00)
+                    </label>
+                    <label>
+                        <input type="radio" name="vanillaQuantity" value="6"> 2 Scoop (Rm15)
+                    </label>
+                    <label>
+                        <input type="radio" name="vanillaQuantity" value="12"> Bowl (Rm20.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('ucecreams', 'Honey Vanilla', 'vanillaQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Beverages Flavors -->
+<div id="beverageModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('beverageModal')">&times;</span>
+        <h2>Ice Cream Flavors</h2>
+        <div class="flavor-list">
+            <div class="flavor-item">
+                <img src="baileys-cookies-and-cream-milkshake-photo.webp" alt="baileys-cookies-and-cream-milkshake-photo">
+                <h3>Cookies N Cream Milkshake</h3>
+                <p class="flavor-description">Cookies and cream is such a good combo with a bit of Irish cream</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="milkQuantity" value="1" checked> 1 Glass (Rm14.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('beverages', 'Oreo Milkshake', 'milkQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="caramel-milkshake-image.webp" alt="caramel-milkshake-image">
+                <h3>Dreamy Caramel Milkshake</h3>
+                <p class="flavor-description">Caramel drizzle on top pair with white chocolate milkshake/p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="caramelQuantity" value="1" checked> 1 Glass (Rm14.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('beverages', 'Caramel', 'caramelQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="chocolate-peanut-butter-milkshake-image-1025x1536.webp" alt="chocolate-peanut-butter-milkshake-image-1025x1536">
+                <h3>Peanut Butter Milkshake</h3>
+                <p class="flavor-description">Chocolate and peanut butter are just about the perfect pair</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="PeanutQuantity" value="1" checked> 1 Glass (Rm14.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('beverages', 'Peanut', 'PeanutQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="chocolate-milkshake-image-1025x1536.webp" alt="chocolate-milkshake-image-1025x1536">
+                <h3>Yummy Chocolate Milkshake</h3>
+                <p class="flavor-description">Made with homemade chocolate syrup is thick and creamy with a killer chocolate flavor.</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="chocolateQuantity" value="1" checked> 1 Glass (Rm14.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('beverages', 'Chocolate', 'chocolateQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+            <div class="flavor-item">
+                <img src="strawberry-banana-milkshake-image.webp" alt="strawberry-banana-milkshake-image">
+                <h3>Strawberry Banana Milkshake</h3>
+                <p class="flavor-description">Rich and creamy, with a perfect balance of banana and strawberry</p>
+                <div class="quantity-selection">
+                    <label>
+                        <input type="radio" name="bananaQuantity" value="1" checked> 1 Glass (Rm14.90)
+                    </label>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('beverages', 'Banana', 'bananaQuantity')">Add to Cart</button>
+            </div>
+            <div id="cart-summary"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Footer -->
+<div id="cartFooter" class="cart-footer">
+    <h3>Cart Summary</h3>
+    <div id="cartItems"></div>
+    <p>Total: $<span id="cartTotal">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+
+    <script>
+        // Initialize an empty cart
+let cart = [];
+
+// Pricing structure for different menu items
+const prices = {
+    cupcakes: {
+        "Mystic Moon": { 1: 8.00, 6: 45.00, 12: 90.00 },
+        "Gold Digger": { 1: 8.00, 6: 45.00, 12: 90.00 },
+        "Rock City": { 1: 8.00, 6: 45.00, 12: 90.00 },
+        "Loukoumades": { 1: 8.00, 6: 45.00, 12: 90.00 },
+        "Strawberry": { 1: 8.00, 6: 45.00, 12: 90.00 },
+        "Freakfetti": { 1: 9.00, 6: 52.00, 12: 102.00 }
+    },
+    cakes: {
+        "Srawberry Cake": { 1: 12.00, 6: 70.00, 12: 130.00 },
+        "Red Velvet": { 1: 12.00, 6: 70.00, 12: 130.00 },
+        "Ferrero": { 1: 15.00, 6: 90.00, 12: 160.00 },
+        "Oreo Cake": { 1: 15.00, 6: 90.00, 12: 160.00 },
+        "Carrot Cake": { 1: 13.00, 6: 75.00, 12: 150.00 }
+    },
+    doughnuts: {
+        "Biscella": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Bruno Mars": { 1: 5.00, 6: 30.00, 12: 55.00 },
+        "Robert": { 1: 5.00, 6: 30.00, 12: 55.00 },
+        "Cate": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Slim": { 1: 4.00, 6: 24.00, 12: 45.00 }
+    },
+    macarons: {
+        "Biscoff": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Cranberry": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Pistachio": { 1: 5.00, 6: 30.00, 12: 55.00 },
+        "Blackberries": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Coconut": { 1: 4.00, 6: 24.00, 12: 45.00 }
+    },
+    cookies: {
+        "Compost": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Confetti": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Cornflakes": { 1: 5.00, 6: 30.00, 12: 55.00 },
+        "Blueberries": { 1: 4.00, 6: 24.00, 12: 45.00 },
+        "Peanut": { 1: 4.00, 6: 24.00, 12: 45.00 }
+    },
+    icecream : {
+        "Pink Peppermint": { 1: 8.00, 6: 15.00, 12: 20.90 },
+        "Lemon": { 1: 8.00, 6: 15.00, 12: 20.90 },
+        "Cookies N Cream": { 1: 8.00, 6: 15.00, 12: 20.90 },
+        "wildberry": { 1: 8.00, 6: 15.00, 12: 20.90 },
+        "Texas": { 1: 8.00, 6: 15.00, 12: 20.90 },
+        "Honey Vanilla": { 1: 8.00, 6: 15.00, 12: 20.90 }
+    },
+    beverages : {
+        "Oreo Milkshake": { 1: 14.90 },
+        "Caramel": { 1: 14.90 },
+        "Peanut": { 1: 14.90 },
+        "Chocolate": { 1: 14.90 },
+        "Banana": { 1: 14.90 }
+
+    }
+};
+
+// Function to open the modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+// Function to close the modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Function to get price based on item type, flavor, and quantity
+function getPrice(itemType, flavor, quantity) {
+    return prices[itemType][flavor][quantity];
+}
+
+
+// Function to add items to the cart
+function addToCart(itemType, flavor, quantityName) {
+    const quantity = parseInt(document.querySelector(`input[name="${quantityName}"]:checked`).value);
+    const price = getPrice(itemType, flavor, quantity);
+
+    if (price === null) {
+                alert("Invalid item or quantity. Please try again.");
+                return;
+            }
+    
+    // Check if the item with the specific flavor already exists in the cart
+    const existingItem = cart.find(item => item.flavor === flavor && item.type === itemType);
+    
+    if (existingItem) {
+        // Update quantity and total price if it already exists
+        existingItem.quantity += quantity;
+        existingItem.totalPrice += price;
+    } else {
+        // Add new item to the cart with the specific quantity
+        cart.push({
+            type: itemType,
+            flavor: flavor,
+            quantity: quantity,
+            totalPrice: price
+        });
+    }
+
+    // Display cart summary
+    displayCart();
+}
+
+// Function to remove items from the cart
+function removeFromCart(flavor, itemType) {
+    cart = cart.filter(item => !(item.flavor === flavor && item.type === itemType));
+    displayCart();
+}
+
+// Function to display the cart summary
+function displayCart() {
+    const cartSummary = document.getElementById('cart-summary');
+    cartSummary.innerHTML = ''; // Clear previous content
+    let total = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.totalPrice;
+        total += itemTotal;
+        cartSummary.innerHTML += `
+            <p>${item.flavor} (${item.type}): ${item.quantity} piece(s) - $${itemTotal.toFixed(2)} 
+            <button onclick="removeFromCart('${item.flavor}', '${item.type}')">Remove</button></p>`;
+    });
+
+    cartSummary.innerHTML += `<p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+}
+
+// Image slider functionality
+const sliders = document.querySelectorAll('.image-slider');
+sliders.forEach(slider => {
+    const images = slider.querySelectorAll('.slider-image');
+    let currentIndex = 0;
+    setInterval(() => {
+        images[currentIndex].style.display = 'none'; // Hide current image
+        currentIndex = (currentIndex + 1) % images.length; // Move to next image
+        images[currentIndex].style.display = 'block'; // Show next image
+    }, 3000); // Change image every 3 seconds
+});
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            closeModal(modal.id);
+        }
+    });
+}
+</script>
+
+</body>
+</html>

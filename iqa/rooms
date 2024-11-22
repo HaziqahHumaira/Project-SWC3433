@@ -1,0 +1,88 @@
+<?php
+// Database connection details
+$host = 'localhost';  // Database server
+$dbname = 'iqa'; // Your database name
+$username = 'root';   // Your MySQL username
+$password = 'syakila03';       // Your MySQL password
+
+// Create a PDO connection
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Could not connect to the database: " . $e->getMessage());
+}
+
+// Fetch room data from the database
+$query = "SELECT * FROM rooms";
+$stmt = $pdo->query($query);
+$rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Booking handler
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $selectedRoom = $_POST['room_type'];
+    $guests = $_POST['guests'];
+    $roomPrice = 0;
+
+    // Find the selected room's price
+    foreach ($rooms as $room) {
+        if ($room['room_type'] == $selectedRoom) {
+            $roomPrice = $room['price'];
+            break;
+        }
+    }
+
+    // Calculate total price based on guests
+    $totalPrice = $roomPrice * $guests;
+    echo "<script>alert('You have booked a $selectedRoom for $guests guests. Total price: RM $totalPrice');</script>";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms</title>
+    <style>
+        /* Add your CSS styling here */
+    </style>
+</head>
+<body>
+
+<main>
+    <h2>Our Rooms</h2>
+
+    <?php foreach ($rooms as $room): ?>
+    <section class="room">
+        <img src="<?php echo $room['image']; ?>" alt="<?php echo $room['room_type']; ?>" class="room-img">
+        <div class="room-info">
+            <h3><?php echo $room['room_type']; ?></h3>
+            <p><?php echo $room['description']; ?></p>
+            <ul>
+                <li>Bed: <?php echo $room['bed_type']; ?></li>
+                <li>Capacity: <?php echo $room['capacity']; ?> Guests</li>
+                <li>View: <?php echo $room['view']; ?></li>
+                <li><?php echo implode(', ', explode(',', $room['amenities'])); ?></li>
+            </ul>
+            <p class="price">Price: RM<?php echo $room['price']; ?>/night</p>
+
+            <!-- Booking Form -->
+            <form method="POST">
+                <label for="guests_<?php echo $room['id']; ?>">Number of Guests:</label>
+                <select name="guests" id="guests_<?php echo $room['id']; ?>" required>
+                    <?php for ($i = 1; $i <= $room['capacity']; $i++): ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php endfor; ?>
+                </select>
+                <input type="hidden" name="room_type" value="<?php echo $room['room_type']; ?>">
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+    <?php endforeach; ?>
+
+</main>
+
+</body>
+</html>

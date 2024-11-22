@@ -1,0 +1,352 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Embun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial,;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #494c8e;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo img {
+            width: 70px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .navbar ul li a:hover {
+            color: #17b4db;
+        }
+
+        .login-btn {
+            background-color: #152f51;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #17b4db;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url('bckg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            background-color: #152f51;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #17b4db;
+        }
+
+        .best-seller {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .best-seller h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .desserts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Why Stay with Us Section */
+.dessert-item {
+    background-color: rgb(32, 86, 128);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom-in transition */
+}
+
+.dessert-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth zoom-in effect for the image */
+}
+
+.dessert-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the whole item */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+.dessert-item:hover img {
+    transform: scale(1.1); /* Zoom-in the image slightly more */
+}
+
+        .dessert-item h3 {
+            color: #ffea2f;
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .dessert-item p {
+            font-size: 1rem;
+            color: #fff8f8;
+            margin: 5px 0;
+        }
+
+        .order-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #17b4db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #152f51;
+        }
+
+        .footer {
+            background-color: #494c8e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #17b4db;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #494c8e;
+        }
+
+        .modal-content input[type="text"],
+        .modal-content input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background-color: #152f51;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #17b4db;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo2.jpg" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.php">Room</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="login-btn" onclick="showLoginModal()">Admin Login</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to The Royal Embun</h1>
+            <p>Book trips and explore new destinations with ease from anywhere</p>
+            <a href="rooms.php" class="cta-btn">Book W Us!</a>
+        </div>
+    </section>
+
+    <!-- Why Stay with Us Section -->
+    <section class="best-seller">
+        <h2>Why Stay with Us?</h2>
+        <div class="desserts">
+            <div class="dessert-item">
+                <img src="roommm.jpg" alt="Room">
+                <h3>Comfort and Amenities</h3>
+                <p>Cozy rooms with premium bedding, high-speed internet, and modern amenities.</p>
+                <p class="rating">★★★★☆ (200 reviews)</p>
+                <a href="rooms.php" class="order-btn">Book Now</a>
+            </div>
+            <div class="dessert-item">
+                <img src="gymm.jpg" alt="Gym">
+                <h3>Exceptional Service</h3>
+                <p>Friendly, professional staff dedicated to ensuring a memorable stay.</p>
+                <p class="rating">★★★★★ (150 reviews)</p>
+                <a href="rooms.php" class="order-btn">Book Now</a>
+            </div>
+            <div class="dessert-item">
+                <img src="receiption.jpg" alt="Reception">
+                <h3>Flexible Booking</h3>
+                <p>Easy reservations, flexible check-in/check-out, and cancellation policies.</p>
+                <p class="rating">★★★★☆ (180 reviews)</p>
+                <a href="rooms.php" class="order-btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Admin Login</h2>
+            <form action="admin_login.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <p>Contact Us: theroyalembun@luxurystay.com</p>
+            <p>123 luxury St, Paradise City, 56100, Kuala Lumpur</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showLoginModal() {
+            document.getElementById("loginModal").style.display = "block";
+        }
+
+        function closeLoginModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("loginModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
